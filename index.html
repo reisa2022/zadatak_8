@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreiranje responsive galerije</title>
+</head>
+<style>
+  body {
+    font-family: Arial;
+}
+
+h1 {
+    text-align: center;
+    font-size: calc(28px + (35 - 28) * (100vw - 320px) / (1600-320));
+    margin-bottom: 40px;
+}
+
+#main-wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#wrapper > div {
+    margin-bottom: 80px;
+}
+
+.img-title p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(253, 254, 255);
+    line-height: 40px;
+    font-size: calc(14px + (18 - 14) * (100vw - 320px) / (1600 - 320));
+}
+
+
+.slika {
+    min-height: 150px;
+    background-image: url(placeholder-image.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(100, 158, 245);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+.slika:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+
+#paragraf {
+    text-align: justify;
+    font-size: calc(14px + (16 - 14) * (100vw - 320px) / (1600 - 320));
+    margin-top: -60px;
+}
+
+@media screen and (max-width: 319px) {
+
+    h1 {
+        font-size: 22px;
+    }
+    .img-title p {
+        font-size: 18px;
+    }
+    #paragraf {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        text-align: start;
+        margin-left: 0;
+    }
+    #main-wrapper {
+        width: 90%;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+@media screen and (min-width: 1600px) {
+
+    h1 {
+        font-size: 35px;
+    }
+    .img-title p {
+        font-size: 28px;
+    }
+    #paragraf {
+        font-size: 16px;
+    }
+}
+
+
+
+    #wrapper > div {
+        width: 30%;
+    }
+    
+    .img-title p {
+        line-height: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    
+    #main-wrapper {
+        width: 98%;
+    }
+    #wrapper > div {
+        width: 17%;
+    }
+}
+</style>
+<body>
+    <div id="main-wrapper">
+        <h1>Gallery Heading</h1>
+        <div id="wrapper">
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+
+        <div>
+        <div class="slika"></div>
+        <div class="img-title">
+            <p>Image title</p>
+        </div>
+        </div>
+    </div>
+        
+    <p id="paragraf">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+    
+    </div>
+</body>
+</html>
